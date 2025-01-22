@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+    <main class="d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class="certificate-container">
+            <img src="image/certificate.png" alt="certificate" class="certificate">
+            <!-- Dynamic text fields -->
+            <div class="certificate-text vin"></div>
+            <div class="certificate-text reg-no"></div>
+            <div class="certificate-text engine-type"></div>
+            <div class="certificate-text vehicle-type"></div>
+            <div class="certificate-text engine-no"></div>
+            <div class="certificate-text fuel-type"></div>
+            <div class="certificate-text kit-type"></div>
+            <div class="certificate-text model"></div>
+            <div class="certificate-text tank-type"></div>
+            <div class="certificate-text tank-size"></div>
+            <div class="certificate-text tank-id"></div>
+            <div class="certificate-text tank-year"></div>
+            <div class="certificate-text nominal-pressure"></div>
+            <div class="certificate-text hydrostatic-pressure"></div>
+            <div class="certificate-text leakage-pressure"></div>
+            <div class="certificate-text tank-expiry"></div>
+            <div class="certificate-text on-this-day"></div>
+            <div class="certificate-text expiry-date"></div>
+            <div class="certificate-text conversion-center"></div>
+        </div>
+
+        <!-- Button to Open Modal -->
+        <button class="btn btn-success py-3 px-2 rounded-1 mt-3" data-bs-toggle="modal" data-bs-target="#certificateModal">
+            Fill Certificate Info
+        </button>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bolder text-center text-success mb-3" id="certificateModalLabel">Filling in the Certificate Info</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="certificateForm">
+                        <div class="row g-3">
+                            <!-- Input fields here -->
+                            <div class="col-md-6"><label class="form-label">VIN/Chassis No:</label><input type="text" class="form-control" name="vin"></div>
+                            <div class="col-md-6"><label class="form-label">REG. NO:</label><input type="text" class="form-control" name="reg-no"></div>
+                            <div class="col-md-6"><label class="form-label">Engine Type:</label><input type="text" class="form-control" name="engine-type"></div>
+                            <div class="col-md-6"><label class="form-label">Vehicle/Type:</label><input type="text" class="form-control" name="vehicle-type"></div>
+                            <div class="col-md-6"><label class="form-label">ENG. NO:</label><input type="text" class="form-control" name="engine-no"></div>
+                            <div class="col-md-6"><label class="form-label">Primary Fuel Type:</label><input type="text" class="form-control" name="fuel-type"></div>
+                            <div class="col-md-6"><label class="form-label">Kit Type:</label><input type="text" class="form-control" name="kit-type"></div>
+                            <div class="col-md-6"><label class="form-label">Model:</label><input type="text" class="form-control" name="model"></div>
+                            <div class="col-md-6"><label class="form-label">Tank Type:</label><input type="text" class="form-control" name="tank-type"></div>
+                            <div class="col-md-6"><label class="form-label">Tank Size:</label><input type="text" class="form-control" name="tank-size"></div>
+                            <div class="col-md-6"><label class="form-label">Tank ID:</label><input type="text" class="form-control" name="tank-id"></div>
+                            <div class="col-md-6"><label class="form-label">Tank Maf. Year:</label><input type="text" class="form-control" name="tank-year"></div>
+                            <div class="col-md-6"><label class="form-label">Nominal Working Pressure:</label><input type="text" class="form-control" name="nominal-pressure"></div>
+                            <div class="col-md-6"><label class="form-label">Hydrostatic Test Pressure:</label><input type="text" class="form-control" name="hydrostatic-pressure"></div>
+                            <div class="col-md-6"><label class="form-label">Leakage Test Pressure:</label><input type="text" class="form-control" name="leakage-pressure"></div>
+                            <div class="col-md-6"><label class="form-label">Tank Expiry Year:</label><input type="text" class="form-control" name="tank-expiry"></div>
+                            <div class="col-md-6"><label class="form-label">On this day:</label><input type="date" class="form-control" name="on-this-day"></div>
+                            <div class="col-md-6"><label class="form-label">Expiry Date:</label><input type="date" class="form-control" name="expiry-date"></div>
+                            <div class="col-md-12"><label class="form-label">Conversion Center:</label><input type="text" class="form-control" name="conversion-center"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success px-4" onclick="populateCertificate()">Submit Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Bootstrap JavaScript Libraries -->
+     <script
+     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+     crossorigin="anonymous"
+ ></script>
+
+ <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+     crossorigin="anonymous"
+ ></script>
+ <script src="js/script.js"></script>
+</body>
+</html>

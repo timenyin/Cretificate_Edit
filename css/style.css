@@ -1,0 +1,131 @@
+
+        /* .certificate-container {
+            position: relative;
+            width: 850px;
+            height: 600px;
+        } */
+
+        .certificate-container {
+            position: relative;
+            width: 850px;
+            height: 600px;
+            padding: 4px; 
+            border: 8px solid green; 
+            background-color: white;
+        }
+
+        .certificate {
+            width: 100%;
+            height: 100%;
+        }
+
+        .certificate-text {
+            position: absolute;
+            font-size: 14px;
+            color: black;
+            font-weight: 700;
+        }
+
+        .vin {
+            top: 231px;
+            left: 217px;
+        }
+
+        .reg-no {
+            top: 231px;
+            left: 455px;
+        }
+
+        .engine-type {
+            top: 231px;
+            left: 694px;
+        }
+
+        .vehicle-type {
+            top: 255px;
+            left: 200px;
+        }
+
+        .engine-no {
+            top: 254px;
+            left: 452px;
+        }
+
+        .fuel-type {
+            top: 255px;
+            left: 732px;
+        }
+        
+        
+        .kit-type {
+            top: 314px;
+            left: 153px;
+        }
+
+        .model {
+            top: 337px;
+            left: 140px;
+        }
+
+
+        .tank-type {
+            top: 314px;
+            left: 393px;
+        }
+
+        .tank-size {
+            top: 333px;
+            left: 392px;
+        }
+
+        .tank-id {
+            top: 351px;
+            left: 375px;
+        }
+
+        .tank-year {
+            top: 370px;
+            left: 424px;
+        }
+
+
+        .nominal-pressure {
+            top: 314px;
+            left: 724px;
+        }
+
+        .hydrostatic-pressure {
+            top: 334px;
+            left: 718px;
+        }
+
+        .leakage-pressure {
+            top: 351px;
+            left: 695px;
+        }
+
+        .tank-expiry {
+            top: 370px;
+            left: 654px;
+        }
+
+        .on-this-day {
+            top: 389px;
+            left: 320px;
+        }
+
+        .expiry-date {
+            top: 390px;
+            left: 526px;
+        }
+
+        .conversion-center {
+            top: 477px;
+            left: 99px;
+        }
+
+@media print {
+        button[data-bs-toggle="modal"] {
+            display: none;
+        }
+    }
